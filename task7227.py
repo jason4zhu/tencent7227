@@ -83,8 +83,9 @@ def task7227(cfg, datafile, caid):
             time.sleep(10)
             cmd = "rm %s" % path
             os.system(cmd)
-            os.system("ssh supertool@d15.mzhen.cn \"mkdir -p /home/data/ftp/tencent/task_7227/%s\"" % (caid,))
-            os.system("rsync -azP --bwlimit=5120 %s.tar.gz supertool@d15.mzhen.cn:/home/data/ftp/tencent/task_7227/%s" % (path,caid,))
+            os.system("mv %s.tar.gz /home/data10/TencentTools/result" % (path,))
+            #os.system("ssh supertool@d15.mzhen.cn \"mkdir -p /home/data/ftp/tencent/task_7227/%s\"" % (caid,))
+            #os.system("rsync -azP --bwlimit=5120 %s.tar.gz supertool@d15.mzhen.cn:/home/data/ftp/tencent/task_7227/%s" % (path,caid,))
         
         os.system("rm -rf "+output_path)
         

@@ -1,6 +1,7 @@
 #!/bin/sh
 
-source /home/data12/supertool/yuchangliang/task7227/funcs.udf
+#source /home/data12/supertool/yuchangliang/task7227/funcs.udf
+source ./funcs.udf
 
 
 

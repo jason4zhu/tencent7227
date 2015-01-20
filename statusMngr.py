@@ -7,7 +7,7 @@ Created on 2014年9月4日
 import os
 
 global statusFileName
-statusFileName = '/var/www/html/tools/main.status'
+statusFileName = '/home/data10/TencentTools/tools/main.status'
 
 global STATUS_ONGOING
 STATUS_ONGOING                      = (2, "正在进行中")

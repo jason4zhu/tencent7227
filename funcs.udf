@@ -1,0 +1,21 @@
+
+
+job_name="zhudi_task7227_tencent_tools"
+
+udf_define="
+add jar /home/data12/supertool/yuchangliang/task7227/udf-collection-1.0-SNAPSHOT.jar;
+set mapred.job.name=$job_name;
+set mapred.job.priority=VERY_HIGH;
+set mapred.job.queue.name=diablo;
+
+
+CREATE TEMPORARY FUNCTION reach as 'com.miaozhen.diablo.mzhiveudf.Reach';
+CREATE TEMPORARY FUNCTION row_to_map AS 'com.miaozhen.diablo.mzhiveudf.RowToMap';
+CREATE TEMPORARY FUNCTION b62_to_b10 AS 'com.miaozhen.diablo.mzhiveudf.B62toB10';
+CREATE TEMPORARY FUNCTION b64_to_b10 AS 'com.miaozhen.diablo.mzhiveudf.B64toB10';
+CREATE TEMPORARY FUNCTION b10_to_b62 AS 'com.miaozhen.diablo.mzhiveudf.B10toB62';
+CREATE TEMPORARY FUNCTION b10_to_b64 AS 'com.miaozhen.diablo.mzhiveudf.B10toB64';
+CREATE TEMPORARY FUNCTION panel_match AS 'com.miaozhen.diablo.mzhiveudf.PanelMatch';
+CREATE TEMPORARY FUNCTION ip_to_region as 'com.miaozhen.diablo.mzhiveudf.IpToRegionFunction';
+CREATE TEMPORARY FUNCTION belong_to_region as 'com.miaozhen.diablo.mzhiveudf.BelongToRegionFunction';"
+
